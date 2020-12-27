@@ -81,9 +81,10 @@ def capture_image():
         print '\nTime-lapse capture cancelled.\n'
 
 # Create directory based on current timestamp.
+arg = sys.argv[1]
 dir = os.path.join(
     sys.path[0],
-    'series-' + datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    arg
 )
 create_timestamped_dir(dir)
 
